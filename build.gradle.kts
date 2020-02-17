@@ -21,7 +21,7 @@ springBoot {
 
 
 tasks.getByName<Wrapper>("wrapper") {
-  gradleVersion = "4.10.1"
+  gradleVersion = "6.2"
 }
 
 
