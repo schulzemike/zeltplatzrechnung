@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/standardLayout}">
+  <head>
+    <title>ZePAV - Übersicht</title>
+  </head>
+  <body>
+    <section layout:fragment="content">
+      <div>
+
+        <form th:action="@{/logout}" method="post">
+          <input type="submit" value="Sign Out"/>
+        </form>
+
+        <p>lalalal</p>
+        <p th:text="${authenticated}"></p>
+        <div th:if="${authenticated}">
+          <p>Sie sind eingeloggt.</p>
+        </div>
+
+        <hr>
+
+        <p>Hallo </p>
+        <p th:text="${role.concat(' & ').concat(anderes)}"></p>
+      </div>
+
+    </section>
+  </body>
+</html>

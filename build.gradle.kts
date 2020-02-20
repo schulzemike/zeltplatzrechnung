@@ -33,20 +33,25 @@ repositories {
 
 dependencies {
 
-  compile("org.springframework.boot:spring-boot-starter-data-jpa:2.0.5.RELEASE")
-  compile("org.springframework.boot:spring-boot-starter-security:2.0.5.RELEASE")
-  compile("org.springframework.boot:spring-boot-starter-thymeleaf:2.0.5.RELEASE")
-  compile("org.springframework.boot:spring-boot-starter-web:2.0.5.RELEASE")
-//  compile("org.liquibase:liquibase-core:3.6.2")
-  compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.3.0")
-  compile("org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.1.RELEASE")
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.0.5.RELEASE")
+  implementation("org.springframework.boot:spring-boot-starter-security:2.0.5.RELEASE")
+  implementation("org.springframework.boot:spring-boot-starter-thymeleaf:2.0.5.RELEASE")
+  implementation("org.springframework.boot:spring-boot-starter-web:2.0.5.RELEASE")
+  implementation("org.liquibase:liquibase-core:3.6.2")
+  implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.3.0")
+  implementation("org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.1.RELEASE")
+
+  implementation("org.webjars:bootstrap:4.1.1")
+  implementation("org.webjars:jquery:3.3.1-1")
 
   compileOnly("org.projectlombok:lombok:1.18.2")
 
-  compile("mysql:mysql-connector-java:8.0.11")
-  runtime("org.springframework.boot:spring-boot-devtools:2.0.3.RELEASE")
+  implementation("mysql:mysql-connector-java:8.0.11")
+  runtimeOnly("org.springframework.boot:spring-boot-devtools:2.0.3.RELEASE")
 
-  testCompile("org.springframework.boot:spring-boot-starter-test:2.0.3.RELEASE")
-  testCompile("org.springframework.security:spring-security-test:5.0.6.RELEASE")
+  testImplementation("com.h2database:h2:1.4.197")
+  testImplementation("org.springframework.boot:spring-boot-starter-test:2.0.3.RELEASE")
+  testImplementation("org.springframework.security:spring-security-test:5.0.6.RELEASE")
+  testImplementation("org.assertj", "assertj-core", "3.15.0")
 }
 

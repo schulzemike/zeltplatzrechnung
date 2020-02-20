@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/standardLayout}">
+  <head>
+    <title>Greetings</title>
+  </head>
+  <body>
+    <!--@thymesVar id="startDTO" type="de.tollefreunde.zeltplatzrechnung.campingfreund.StartDO"-->
+    <section layout:fragment="content" th:object="${startDTO}">
+
+      <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+      </form>
+
+      <p th:text="'Hello, ' + *{name} + ' - welcom to this greeting page!'">Welcome to this page</p>
+      <p th:text="'Number of users: ' + *{numberOfUsers}">Number of users</p>
+      <p th:text="'Surname of first user: ' + *{surname}">surname</p>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-success">This is a success button</button>
+        <button type="button" class="btn btn-warning">This is a warning button</button>
+        <button type="button" class="btn btn-danger">This is a danger button</button>
+      </div>
+    </section>
+
+  </body>
+</html>
